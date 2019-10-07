@@ -1,14 +1,93 @@
 @import "normalize.css";
+@font-face {
+    font-family: Lato thin;
+    src: url(../fonts/Lato-Thin.ttf);
+}
+@font-face {
+    font-family: Lato Black;
+    src: url(../fonts/Lato-Black.ttf);
+}
 
 .home {
     background: url(../img/main-bg.jpg);
     background-size: cover;
-    
 }
 
 header {
     background: url(../img/main-shadow.png) repeat-x top;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding-top: 25px;
+    margin: auto;
+}
+
+.logo {
+    padding-left: 100px;
+}
+
+nav {
+    font-family: Lato thin;
+    font-size: 12px;
+    padding-right: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-menu {
+    width: 65px;
+    margin-left: 30px;
+    padding-top: 27px;
+    &:hover {
+        border-top: solid 1px #4c76ff;
+    }
+}
+
+.home-content {
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    font-family: Lato Black;
+    font-size: 62px;
+    color: #fff;
+    padding-top: 250px;
+    margin: 0;
+}
+
+.text-color-decor {
+    color: #4c76ff;
+}
+
+.home-text {
+    font-family: Lato thin;
+    font-size: 48px;
+    color: #fff;
+    margin: 25px;
+}
+
+.home-text-s {
+    font-size: 18px;
+}
+
+.home-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-social-block {
+    width: 25px;
+    padding-left: 15px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    transition: 1s;
+    &:hover {
+        transform: scale(1.5);
+    }
 }
