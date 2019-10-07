@@ -1,0 +1,14 @@
+@import "normalize.css";
+.home {
+  background: url(../img/main-bg.jpg);
+  background-size: cover;
+}
+
+header {
+  background: url(../img/main-shadow.png) repeat-x top;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=style.css.map */
