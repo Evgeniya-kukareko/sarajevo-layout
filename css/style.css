@@ -116,7 +116,7 @@ h1 {
   margin: auto;
 }
 
-.features-block h2 {
+h2 {
   font-family: Lato Black;
   font-size: 28px;
   color: #4c76ff;
@@ -184,6 +184,53 @@ h1 {
 
 .features-group .features-box:hover {
   background: #fefce9;
+}
+
+.works {
+  background: #fff;
+  text-align: center;
+}
+
+.works-block {
+  max-width: 1220px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.works-text {
+  font-family: Lato thin;
+  font-size: 14px;
+  max-width: 720px;
+  margin: auto;
+  padding-top: 45px;
+}
+
+.works-butt {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+button {
+  padding: 5px;
+  margin-left: 25px;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  font-family: Lato Black;
+  font-size: 14px;
+  background-color: transparent;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #4c76ff;
+  color: #fff;
+}
+button:active {
+  transform: translateY(1px);
+}
+
+.works-gallery img {
+  width: 300px;
+  height: 225px;
 }
 
 /*# sourceMappingURL=style.css.map */
