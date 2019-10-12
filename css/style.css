@@ -228,9 +228,46 @@ button:active {
   transform: translateY(1px);
 }
 
-.works-gallery img {
+.works-gallery {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.gallery-item {
   width: 300px;
   height: 225px;
+  position: relative;
+}
+.gallery-item .gallery-main-img img {
+  width: 300px;
+  height: 225px;
+}
+.gallery-item .gallery-hidden {
+  background: rgba(89, 126, 249, 0.8);
+  width: 300px;
+  height: 225px;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.gallery-item .gallery-hidden .gallery-text {
+  font-family: Opensans Bold;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.gallery-item .gallery-hidden .gallery-type {
+  font-family: Opensans Bold;
+  font-size: 10px;
+  color: #fff;
+  margin-top: 5px;
+}
+.gallery-item:hover > .gallery-hidden {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
