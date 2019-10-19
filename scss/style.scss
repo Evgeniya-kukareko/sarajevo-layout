@@ -26,7 +26,7 @@
 }
 
 .home-shadow {
-    background: url(../img/main-shadow.png) repeat-x top,
+    background: url(../img/main-shadow.png) repeat-x top;
 }
 
 .container {
@@ -42,17 +42,31 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 25px;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    transition: all 0.3s linear;
 }
 
+.sticky {
+    background: #062033;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    z-index: 10;
+  }
+
 .logo {
-    padding-left: 100px;
+    padding-left: 230px;
+    padding-top: 23px;
 }
 
 nav {
     font-family: Lato thin;
     font-size: 12px;
-    padding-right: 100px;
+    padding-right: 240px;
+    padding-top: 13px;
 }
 
 a {
@@ -63,7 +77,7 @@ a {
 .nav-menu {
     width: 65px;
     margin-left: 30px;
-    padding-top: 27px;
+    padding-top: 20px;
     &:hover {
         border-top: solid 1px #4c76ff;
     }
@@ -77,7 +91,7 @@ h1 {
     font-family: Lato Black;
     font-size: 62px;
     color: #fff;
-    padding-top: 250px;
+    padding-top: 235px;
     margin: 0;
 }
 
@@ -89,24 +103,23 @@ h1 {
     font-family: Lato thin;
     font-size: 48px;
     color: #fff;
-    margin: 25px;
+    margin: 2px;
 }
 
 .home-text-s {
     font-size: 18px;
+    margin: 20px;
 }
 
 .home-social {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 28px;
 }
 
 .home-social-block {
-    width: 30px;
-    padding-right: 15px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 90px 5px;
     transition: 1s;
     opacity: 0.3;
     &:hover {
@@ -132,6 +145,7 @@ h2 {
     &::after {
         content: url(../img/shape.png);
         display: block;
+        padding: 8px;
     }
 }
 
@@ -139,8 +153,8 @@ h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 45px; 
-    padding-bottom: 60px;
+    margin-top: 55px; 
+    padding-bottom: 55px;
 }
 
 .features-box {
@@ -239,25 +253,29 @@ h2 {
 .works-butt {
     margin-top: 70px;
     margin-bottom: 70px;
+
+    button {
+        padding: 5px;
+        margin-left: 25px;
+        border: solid 1px transparent;
+        border-radius: 4px;
+        font-family: Lato Black;
+        font-size: 14px;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover, &.active {
+            background-color: #4c76ff;
+            color: #fff;
+        };
+    
+        &:active {
+            transform: translateY(1px);
+         };
+      }
+
 }
 
-button {
-    padding: 5px;
-    margin-left: 25px;
-    border: solid 1px transparent;
-    border-radius: 4px;
-    font-family: Lato Black;
-    font-size: 14px;
-    background-color: transparent;
-    cursor: pointer;
-    &:hover {
-        background-color: #4c76ff;
-        color: #fff;
-    };
-    &:active {
-        transform: translateY(1px);
-     };
-  }
+
 
   .works-gallery {
       display: flex;
@@ -364,6 +382,9 @@ button {
         width: 35px;
         height: 35px;
         margin: 1px;
+        &:hover {
+            background: rgba($color: #3653ae, $alpha: 0.6)
+    }
     }
 }
 
@@ -393,7 +414,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 
 .facts-item {
@@ -428,9 +449,9 @@ button {
 
 .contact-box {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
-    margin: 50px 0;
+    margin: 50px 0 100px 0;
 }
 
 .contact-item {
@@ -455,6 +476,12 @@ button {
     opacity: 0.6;
 }
 
+.contact-text2 {
+    font-family: Opensans Bold;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .contact-item-socil {
     display: flex;
     flex-direction: column;
@@ -466,6 +493,48 @@ button {
 .map {
     text-align: center;
 }
+
+.map-img {
+    max-width: 1200px
+    ;
+}
+
+input[type=text], input[type=email] {
+    font-family: Opensans;
+    font-size: 10px;
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid rgba($color: #888, $alpha: 0.2);
+  }
+
+  input[placeholder="Message"] {
+    width: 605px;
+  }
+
+  .contact-btn {
+      border: none;
+      background: #fff;
+      font-family: Opensans;
+      font-size: 13px;
+      height: 25px;
+      float: right;
+      display: flex;
+      margin: 15px 0 0 0;
+  }
+
+  .envelope {
+      margin-right: 5px; 
+  }
+
+  .contact-social {
+      padding: 5px;
+      transition: 1s;
+      &:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+  }
 
 // footer
 
@@ -506,6 +575,7 @@ ul {
     list-style-type: none;
     padding: 0;
     padding-right: 20px;
+    margin-top: 0;
 }
 
 li, .foot-text1 {
@@ -513,4 +583,12 @@ li, .foot-text1 {
     font-size: 12px;
     color: rgba($color: #fff, $alpha: 0.6);
     padding: 5px;
+}
+
+.foot-item input[type=text] {
+    border: 1px solid #fff;
+    color: #fff;
+    background: rgba($color: #010305, $alpha: 0.9) url(../img/Shape5.png) no-repeat;
+    background-position: 215px 10px;
+    width: 250px;
 }
