@@ -1,3 +1,14 @@
+// hamburger
+
+$(function() {
+    const $menu = $('#menu');
+    const $hamburgerBtn = $('.hamburger-button');
+
+    $hamburgerBtn.on('click', function() {
+        $menu.toggleClass( "hamburger-open" )
+    });
+});
+
 
 // Sticky header
 $(function() {
@@ -62,15 +73,6 @@ $(function() {
         });
     });
 });
-
-
-
-
-
-
-
-
-
 
 var gallery = $('.works-gallery');
 
