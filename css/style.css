@@ -299,6 +299,22 @@ h2::after {
 .works-gallery {
   display: flex;
   flex-flow: row wrap;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+  .works-gallery {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .works-gallery {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .works-gallery {
+    width: 300px;
+  }
 }
 
 .gallery-item {
@@ -346,6 +362,11 @@ h2::after {
   align-items: center;
   flex-flow: row wrap;
   text-align: center;
+}
+@media all and (min-width: 320px) and (max-width: 1000px) {
+  .team-box {
+    justify-content: center;
+  }
 }
 
 .team-item {
@@ -571,6 +592,7 @@ input[placeholder=Message] {
   float: right;
   display: flex;
   margin: 15px 0 0 0;
+  cursor: pointer;
 }
 
 .envelope {
@@ -645,16 +667,21 @@ footer {
 .foot-list {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-  margin-top: 0;
+.foot-list-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 5px;
+}
+.foot-list-block a {
+  cursor: pointer;
 }
 
-li, .foot-text1 {
+.foot-text1 {
   font-family: Opensans;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
@@ -680,7 +707,7 @@ li, .foot-text1 {
     padding-right: 0;
     width: 100%;
   }
-  #menu a:not(:first-child) {
+  #menu a:not(.active) {
     display: none;
   }
   #menu a.hamburger-button {
@@ -690,6 +717,7 @@ li, .foot-text1 {
   }
 }
 #menu.hamburger-open {
+  background: #062033;
   overflow: hidden;
 }
 #menu.hamburger-open a {
