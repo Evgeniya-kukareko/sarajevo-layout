@@ -56,6 +56,10 @@ header {
   z-index: 10;
 }
 
+.active {
+  border-bottom: solid 1px #4c76ff;
+}
+
 .logo {
   padding-left: 230px;
   padding-top: 23px;
